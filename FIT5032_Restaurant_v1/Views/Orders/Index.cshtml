@@ -1,0 +1,64 @@
+﻿@model IEnumerable<FIT5032_Restaurant_v1.Models.Order>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.quantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.unitprice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.orderdate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.pickuptime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.userId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Food.name)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.quantity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.unitprice)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.orderdate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.pickuptime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.userId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Food.name)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.orderId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.orderId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.orderId })
+        </td>
+    </tr>
+}
+
+</table>

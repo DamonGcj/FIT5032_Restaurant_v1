@@ -1,0 +1,67 @@
+﻿@model FIT5032_Restaurant_v1.Models.Order
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Order</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.quantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.quantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.unitprice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.unitprice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.orderdate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.orderdate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pickuptime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pickuptime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.userId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.userId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Food.name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Food.name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.orderId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
