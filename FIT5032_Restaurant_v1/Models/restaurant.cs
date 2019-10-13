@@ -23,7 +23,7 @@ namespace FIT5032_Restaurant_v1.Models
         public int restaurantId { get; set; }
         public string name { get; set; }
         public string location { get; set; }
-        public int contactnumber { get; set; }
+        public string contactnumber { get; set; }
         public string Description { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

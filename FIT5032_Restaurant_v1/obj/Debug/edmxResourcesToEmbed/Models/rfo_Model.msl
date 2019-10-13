@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="rfo_v2ModelStoreContainer" CdmEntityContainer="rfo_v2Entities">
+    <EntitySetMapping Name="Foods">
+      <EntityTypeMapping TypeName="rfo_v2Model.Food">
+        <MappingFragment StoreEntitySet="Food">
+          <ScalarProperty Name="foodId" ColumnName="foodId" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="restaurantId" ColumnName="restaurantId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Orders">
+      <EntityTypeMapping TypeName="rfo_v2Model.Order">
+        <MappingFragment StoreEntitySet="Order">
+          <ScalarProperty Name="orderId" ColumnName="orderId" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+          <ScalarProperty Name="unitprice" ColumnName="unitprice" />
+          <ScalarProperty Name="orderdate" ColumnName="orderdate" />
+          <ScalarProperty Name="pickuptime" ColumnName="pickuptime" />
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="foodId" ColumnName="foodId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="restaurants">
+      <EntityTypeMapping TypeName="rfo_v2Model.restaurant">
+        <MappingFragment StoreEntitySet="restaurant">
+          <ScalarProperty Name="restaurantId" ColumnName="restaurantId" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="location" ColumnName="location" />
+          <ScalarProperty Name="contactnumber" ColumnName="contactnumber" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

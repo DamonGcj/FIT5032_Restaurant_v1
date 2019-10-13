@@ -16,7 +16,7 @@ namespace FIT5032_Restaurant_v1.Models
     {
         public int orderId { get; set; }
         public int quantity { get; set; }
-        public decimal unitprice { get; set; }
+        public double unitprice { get; set; }
         public System.DateTime orderdate { get; set; }
         public System.TimeSpan pickuptime { get; set; }
         public string userId { get; set; }

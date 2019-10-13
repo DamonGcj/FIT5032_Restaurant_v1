@@ -423,6 +423,42 @@ namespace FIT5032_Restaurant_v1.Controllers
             base.Dispose(disposing);
         }
 
+        [Authorize(Roles = "Admin")]
+        // Users role
+        public ActionResult Registerrole()
+        {
+
+            //users
+            // var users = context.Users.ToList();
+            // ViewBag.UserName = new SelectList(users, "UserName", "UserName");
+            //role
+            // var roles = context.Roles.ToList();
+            // ViewBag.roleName = new SelectList(roles, "Name", "Name");
+
+            return View();
+        }
+
+        
+        //POST: CONNECT ROLE AND USER
+        [HttpPost]
+        [AllowAnonymous]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> Registerrole(FormCollection form)
+        {
+            var role = form["RoleName"];
+            var user = form["UserName"];
+
+            //userid
+            //var userid = context.Users.Where(u => u.UserName == user).FirstOrDefault();
+
+            //Store to database
+            //await UserManager.AddToRolesAsync(userid.Id,role);
+
+            return RedirectToAction("Index", "Home");
+
+        }
+
+
         #region Helpers
         // Used for XSRF protection when adding external logins
         private const string XsrfKey = "XsrfId";

@@ -7,12 +7,13 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using FIT5032_Restaurant_v1.Models;
+using Microsoft.AspNet.Identity;
 
 namespace FIT5032_Restaurant_v1.Controllers
 {
     public class OrdersController : Controller
     {
-        private RFO_Entities db = new RFO_Entities();
+        private rfo_v2Entities db = new rfo_v2Entities();
 
         // GET: Orders
         public ActionResult Index()
@@ -21,6 +22,11 @@ namespace FIT5032_Restaurant_v1.Controllers
             return View(orders.ToList());
         }
 
+        public ActionResult ListRestaurant()
+        {
+            var Restaurants = db.restaurants.ToList();
+            return View(Restaurants);
+        }
         // GET: Orders/Details/5
         public ActionResult Details(int? id)
         {
@@ -37,6 +43,12 @@ namespace FIT5032_Restaurant_v1.Controllers
         }
 
         // GET: Orders/Create
+        public ActionResult Create(int? restaurantsId)
+        {
+            //ViewBag.foodId = new SelectList(db.Foods, "foodId", "name");
+            return View();
+        }
+
         public ActionResult Create()
         {
             ViewBag.foodId = new SelectList(db.Foods, "foodId", "name");
@@ -50,6 +62,12 @@ namespace FIT5032_Restaurant_v1.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "orderId,quantity,unitprice,orderdate,pickuptime,userId,foodId")] Order order)
         {
+
+            //set user id
+            var userid = User.Identity.GetUserId();
+            order.userId = userid;
+            //set food id
+            
             if (ModelState.IsValid)
             {
                 db.Orders.Add(order);

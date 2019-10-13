@@ -23,7 +23,7 @@ namespace FIT5032_Restaurant_v1.Models
         public int foodId { get; set; }
         public string name { get; set; }
         public string description { get; set; }
-        public decimal price { get; set; }
+        public double price { get; set; }
         public int restaurantId { get; set; }
     
         public virtual restaurant restaurant { get; set; }

@@ -12,7 +12,7 @@ namespace FIT5032_Restaurant_v1.Controllers
 {
     public class restaurantsController : Controller
     {
-        private RFO_Entities db = new RFO_Entities();
+        private rfo_v2Entities db = new rfo_v2Entities();
 
         // GET: restaurants
         public ActionResult Index()

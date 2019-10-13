@@ -98,8 +98,11 @@ C:\Users\gao\source\repos\FIT5032_Restaurant_v1\FIT5032_Restaurant_v1\bin\Micros
 C:\Users\gao\source\repos\FIT5032_Restaurant_v1\FIT5032_Restaurant_v1\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\gao\source\repos\FIT5032_Restaurant_v1\FIT5032_Restaurant_v1\bin\Microsoft.Owin.Security.OAuth.xml
 C:\Users\gao\source\repos\FIT5032_Restaurant_v1\FIT5032_Restaurant_v1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\gao\source\repos\FIT5032_Restaurant_v1\FIT5032_Restaurant_v1\obj\Debug\FIT5032_Restaurant_v1.csprojAssemblyReference.cache
 C:\Users\gao\source\repos\FIT5032_Restaurant_v1\FIT5032_Restaurant_v1\obj\Debug\FIT5032_Restaurant_v1.csproj.CoreCompileInputs.cache
 C:\Users\gao\source\repos\FIT5032_Restaurant_v1\FIT5032_Restaurant_v1\obj\Debug\FIT5032_Restaurant_v1.csproj.CopyComplete
 C:\Users\gao\source\repos\FIT5032_Restaurant_v1\FIT5032_Restaurant_v1\obj\Debug\FIT5032_Restaurant_v1.dll
 C:\Users\gao\source\repos\FIT5032_Restaurant_v1\FIT5032_Restaurant_v1\obj\Debug\FIT5032_Restaurant_v1.pdb
+C:\Users\gao\source\repos\FIT5032_Restaurant_v1\FIT5032_Restaurant_v1\obj\Debug\FIT5032_Restaurant_v1.csprojAssemblyReference.cache
+C:\Users\gao\source\repos\FIT5032_Restaurant_v1\FIT5032_Restaurant_v1\bin\SendGrid.dll
+C:\Users\gao\source\repos\FIT5032_Restaurant_v1\FIT5032_Restaurant_v1\bin\SendGrid.pdb
+C:\Users\gao\source\repos\FIT5032_Restaurant_v1\FIT5032_Restaurant_v1\bin\SendGrid.xml

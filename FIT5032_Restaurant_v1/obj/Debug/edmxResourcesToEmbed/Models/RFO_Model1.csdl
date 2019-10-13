@@ -32,7 +32,7 @@
     <Property Name="restaurantId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="location" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="contactnumber" Type="Int32" Nullable="false" />
+    <Property Name="contactnumber" Type="String" Nullable="false" />
     <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <NavigationProperty Name="Foods" Relationship="Self.FK__Food__restaurant__6E01572D" FromRole="restaurant" ToRole="Food" />
   </EntityType>

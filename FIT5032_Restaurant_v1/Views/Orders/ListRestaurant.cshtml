@@ -1,0 +1,61 @@
+﻿@model IEnumerable<FIT5032_Restaurant_v1.Models.restaurant>
+
+
+@{
+    ViewBag.Title = "ListRestaurant";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>ListRestaurant</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.location)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.contactnumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.location)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.contactnumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            @*<td>
+                @Html.DisplayFor(modelItem => item.userId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Food.name)
+            </td>*@
+            <td>
+                @Html.ActionLink("Order", "Create", new { id = item.restaurantId })
+                @*@Html.ActionLink("Details", "Details", new { id = item.restaurantId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.restaurantId })*@
+            </td>
+        </tr>
+    }
+
+</table>
